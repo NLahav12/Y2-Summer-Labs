@@ -17,6 +17,9 @@ def home():
     <a href='/food1'>go to the first food photo</a>
     <br>
     <br>
+    <a href='/food3'>go to the third food photo</a>
+    <br>
+    <br>
 
     <a href='/pet2'>go to the second pet photo</a>
     <br>
@@ -37,6 +40,8 @@ def food1():
     width="400">
     <br>
     <a href='/food2'>go to the second food photo</a>
+    <br>
+    <a href='/home'>go back to the home page</a>
     </body>
     </html>
     '''
@@ -48,6 +53,8 @@ def food2():
     <body>
     <img src="https://www.cookingclassy.com/wp-content/uploads/2022/07/grilled-steak-15-600x900.jpg"
     width="400">
+    <br>
+    <a href='/food1'>go to the first food photo</a>
     <br>
     <a href='/food3'>go to the third food photo</a>
     </body>
@@ -63,6 +70,8 @@ def food3():
     width="400">
     <br>
     <a href='/home'>go back to the home page</a>
+    <br>
+    <a href='/food2'>go to the second food photo</a>
     </body>
     </html>
     '''
