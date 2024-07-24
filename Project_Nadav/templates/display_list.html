@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>display list site</title>
+</head>
+<body>
+
+    <h1>Your Task List:</h1>
+    {% if tasks %}
+        {% for key, value in tasks.items() %}
+            <h1>{{ value }}</h1>
+            <form action="/display-users-list" method="POST">
+                <input type="hidden" name="task_id" value="{{ key }}">
+                <input type="hidden" name="task_action" value="remove">
+                <input type="submit" value="remove task">
+            </form>
+            <br>
+        {% endfor %}
+    {% else %}
+        <p>No tasks available.</p>
+    {% endif %}
+    <br><br>
+
+    <h1>Add a Task</h1>
+    <form action="/display-users-list" method="POST">
+        <input type="text" name="task_description" placeholder="Write your new task here">
+        <input type="hidden" name="task_action" value="add">
+        <input type="submit" value="Add Task">
+    </form>
+
+    <br><br>
+    <!--
+    <h1>Update a Task</h1>
+    <form action="/display-users-list" method="POST">
+        <input type="text" name="task_description" placeholder="Write updated task here">
+        <input type="hidden" name="task_action" value="update">
+        <input type="hidden" name="task_id" value="TASK_ID_PLACEHOLDER">
+        <input type="submit" value="Update Task">
+    </form>
+    --> 
+    <br><br>
+    <a href='{{url_for("logout")}}'><button>log out</button></a>
+
+
+</body>
+</html>
